@@ -33,4 +33,18 @@ public class Study {
     private String photo;
 
     private String link;
+    
+    protected Study( )
+    {
+    }
+    
+     public Study(String institution, String name,String description,String photo ,String link)
+    {
+        this.institution=institution;
+        this.name=name;
+        this.description=description;
+        this.photo=photo;
+        this.photo=photo;
+    }
+    
 }

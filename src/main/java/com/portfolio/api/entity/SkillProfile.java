@@ -21,21 +21,18 @@ public class SkillProfile {
     @NotNull
     @NotBlank(message = "Name may not be blank")
     
-    private String skill;
+    private Skill skill; //TODO cambiar por objeto skill
 
     private String percentage;
     
-    private String profile;
+
 
        protected SkillProfile() {
 
     }
 
-    public SkillProfile(String skill, String percentage,String profile) {
+    public SkillProfile(Skill skill, String percentage) {
         this.skill = skill;
         this.percentage = percentage;
-        this.profile = profile;
-        
-        
     }
 }

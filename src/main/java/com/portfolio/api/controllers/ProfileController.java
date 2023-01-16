@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/api/profile")
+@RequestMapping("/api/profiles")
 
 public class ProfileController {
 

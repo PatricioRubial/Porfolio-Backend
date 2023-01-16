@@ -24,7 +24,7 @@ public class Skill {
 
     private String icon;
 
-       protected Skill() {
+    protected Skill() {
 
     }
 

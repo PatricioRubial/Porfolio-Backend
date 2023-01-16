@@ -21,7 +21,7 @@ public class SkillProfile {
     @NotNull
     @NotBlank(message = "Name may not be blank")
     
-    private Skill skill; //TODO cambiar por objeto skill
+    private String skill; //TODO cambiar por objeto skill
 
     private String percentage;
     
@@ -31,7 +31,7 @@ public class SkillProfile {
 
     }
 
-    public SkillProfile(Skill skill, String percentage) {
+    public SkillProfile(String skill, String percentage) {
         this.skill = skill;
         this.percentage = percentage;
     }

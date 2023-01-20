@@ -18,21 +18,24 @@ public class SkillProfile {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    private int percentage;
+
     @NotNull
     @NotBlank(message = "Name may not be blank")
-    
-    private String skill; //TODO cambiar por objeto skill
+    private String name;
 
-    private String percentage;
-    
+    private String icon;
 
+    private String color;
 
-       protected SkillProfile() {
+    protected SkillProfile() {
 
     }
 
-    public SkillProfile(String skill, String percentage) {
-        this.skill = skill;
+    public SkillProfile(String name, int percentage, String icon, String color) {
+        this.name = name;
         this.percentage = percentage;
+        this.icon = icon;
+        this.color = color;
     }
 }

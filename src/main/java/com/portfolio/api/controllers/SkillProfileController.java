@@ -55,9 +55,9 @@ public class SkillProfileController {
         }
 
         var persistedSkillProfile = persistedSkillProfileData.get();
-        persistedSkillProfile.setSkill(skillProfile.getSkill());
+        persistedSkillProfile.setName(skillProfile.getName());
+          persistedSkillProfile.setColor(skillProfile.getColor());
         persistedSkillProfile.setPercentage(skillProfile.getPercentage());
-       // persistedSkillProfile.setProfile(skillProfile.getProfile()); useless? >??
 
         return new ResponseEntity<>(skillProfileRepository.save(persistedSkillProfile), HttpStatus.OK);
     }

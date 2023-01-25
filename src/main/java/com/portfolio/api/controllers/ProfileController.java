@@ -7,7 +7,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -43,14 +42,10 @@ public class ProfileController {
         return new ResponseEntity<>(profile, HttpStatus.OK);
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<Profile> update(@PathVariable("id") long id, @RequestBody Profile profile) {
-        var persistedProfileData = profileRepository.findById(id);
-
-        if (persistedProfileData.isPresent() == false) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-        var persistedProfile = persistedProfileData.get();
+    @PutMapping("")
+    public ResponseEntity<Profile> update(@RequestBody Profile profile) {
+        
+        var persistedProfile = profileRepository.findAll().get(0);
 
         persistedProfile.setName(profile.getName());
         persistedProfile.setTittle(profile.getTittle());

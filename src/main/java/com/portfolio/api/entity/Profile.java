@@ -18,25 +18,24 @@ public class Profile {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
     @NotNull
-    @NotBlank(message = "Name may not be blank")
+    @NotBlank(message = "Password may not be blank")
     private String password;
     @NotNull
-    @NotBlank(message = "Name may not be blank")
+    @NotBlank(message = "Email may not be blank")
     private String email;
     @NotNull
     @NotBlank(message = "Name may not be blank")
     private String name;
     @NotNull
-    @NotBlank(message = "Name may not be blank")
+    @NotBlank(message = "Tittle may not be blank")
     private String tittle;
     @NotNull
-    @NotBlank(message = "Name may not be blank")
+    @NotBlank(message = "Photo may not be blank")
     private String photo;
     @NotNull
-    @NotBlank(message = "Name may not be blank")
+    @NotBlank(message = "Description may not be blank")
     private String description;
-    @NotNull
-    @NotBlank(message = "Name may not be blank")
+    
     private String gitHub;
 
     private String linkedIn;
